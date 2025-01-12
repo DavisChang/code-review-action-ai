@@ -44,7 +44,6 @@ async function run() {
 
       console.log("responseText: ", responseText, "\n\n");
       const comments = parseResponseToComments(responseText, file.filename);
-      console.log("comments", comments);
 
       // Post comments to GitHub
       for (const comment of comments) {
