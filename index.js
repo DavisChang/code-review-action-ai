@@ -7,12 +7,12 @@ dotenv.config();
 async function run() {
   try {
     // Environment variables
-    const githubToken = process.env.GITHUB_TOKEN;
+    const githubToken = process.env.REPO_TOKEN;
     const apiProvider = process.env.API_PROVIDER || "gemini"; // Default to Gemini if not specified
     const openaiApiKey = process.env.OPENAI_API_KEY;
     const googleApiKey = process.env.GEMINI_API_KEY;
-    const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
-    const prNumber = process.env.GITHUB_PR_NUMBER;
+    const [owner, repo] = process.env.REPO_REPOSITORY.split("/");
+    const prNumber = process.env.REPO_PR_NUMBER;
 
     console.log("process.env:", {
       owner,
