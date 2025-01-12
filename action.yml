@@ -1,0 +1,15 @@
+name: Code Review
+description: A GitHub Action to perform automated code reviews using OpenAI's GPT models.
+author: Davis Chang
+
+inputs:
+  openai_api_key:
+    description: "OpenAI API key"
+    required: true
+  github_token:
+    description: "GitHub token for accessing the repository"
+    required: true
+
+runs:
+  using: "node16"
+  main: "index.js"
