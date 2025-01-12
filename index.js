@@ -12,7 +12,7 @@ async function run() {
     const prNumber = process.env.GITHUB_PR_NUMBER;
     const apiProvider = process.env.API_PROVIDER || "openai"; // Choose API provider: openai or gemini
 
-    console.log("API Provider:", apiProvider);
+    console.log("process.env:", { apiProvider, prNumber, owner, repo });
 
     // Initialize Octokit
     const octokit = new Octokit({ auth: githubToken });
